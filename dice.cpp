@@ -10,14 +10,14 @@ int main() {
   int die;
 
   // prompt user for die to roll
-  std::cout << "What die would you like to roll?";
+  std::cout << "What die would you like to roll?\n";
   std::cin >> die;
 
   // use uniform int distribution to generate an in-bounds value
-  std::uniform_int_distribution dist(1, die);
+  std::uniform_int_distribution<> dist(1, die);
 
   // display result to user
-  std::cout << "Result: " << dist << "\n";
+  std::cout << "Result: " << dist(generator) << "\n";
 
   // return zero
   return 0;
